@@ -1,0 +1,381 @@
+/* GENERAL */
+
+:root {
+  --color-white: #f0f0f0;
+  --color-black: #000000;
+  --hover: #6c5cff;
+}
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: 'Courier Prime', monospace;
+  font-family: 'Kanit', sans-serif;
+  font-family: 'Poppins', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+li {
+  list-style: none;
+}
+
+.container {
+  max-width: 100%;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.active {
+  padding: 0.5em 1em;
+  background-color: var(--hover);
+  border-radius: 20px;
+}
+/* HEADER */
+
+.header {
+  position: absolute;
+  width: 100%;
+}
+
+.menu {
+  max-height: 50px;
+  padding-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu__logo,
+.menu__logo-action {
+  max-height: inherit;
+}
+
+.menu__logo-img {
+  max-height: inherit;
+  width: 100%;
+}
+
+.menu__hamburger {
+  position: relative;
+  
+  width: 40px;
+  height: 30px;
+  margin-left: auto;
+  
+  cursor: pointer;
+}
+  
+.menu__hamburger-row {
+  position: absolute;
+  left: 0;
+
+  display: block;
+
+  width: 100%;
+  height: 5px;
+
+  transition: 0.25s ease-in-out;
+  transform: rotate(0deg);
+
+  opacity: 1;
+  border-radius: 5px;
+  background-color: var(--color-white);
+}
+
+.menu__hamburger-row:nth-of-type(1) {
+  top: 0;
+}
+
+.menu__hamburger-row:nth-of-type(2) {
+  top: 12px;
+}
+
+.menu__hamburger-row:nth-of-type(3) {
+  top: 24px;
+}
+
+.menu__actions-list {
+  display: flex;
+  gap: 20px;
+}
+
+.menu__action-link {
+  text-transform: uppercase;
+  color: var(--color-white);
+}
+
+.menu__action-link:hover {
+  color: var(--hover);
+  transition: .6s;
+}
+
+/* MAIN */
+
+.main {
+  background: url(../img/header/header-bg.jpg);
+  background-size: contain;
+  background-repeat: repeat;
+}
+
+.main-page, .location-page {
+  min-height: 100vh;
+  background: url(../img/header/header-bg.jpg);
+  background-size: cover;
+  background-repeat: repeat;
+}
+
+.main__content {
+  color: var(--color-white);
+  min-height: calc(100vh - 50px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.main__content-description {
+  text-align: center;
+  font-size: 18px;
+  line-height: 1.3;
+  padding-bottom: 30px;
+}
+
+.main__content-action {
+  color: var(--color-white);
+  padding: 0.5em 1em;
+  border: 1px solid var(--color-white);
+  background-color: var(--color-black);
+  cursor: pointer;
+}
+
+.main__content-action:hover {
+  color: var(--hover);
+  transition: .6s;
+}
+
+/* LOCATION */
+
+.location {
+  color: var(--color-white);
+}
+
+.location__title {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  text-align: center;
+}
+.location__map {
+  width: 100%;
+  height: 500px;
+}
+.location__description {
+  padding-top: 20px;
+  text-align: justify;
+  line-height: 1.2;
+}
+
+/* GALLERY */
+
+.gallery {
+  padding-bottom: 50px;
+  color: var(--color-white);
+}
+
+.gallery__title {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  text-align: center;
+}
+.gallery__wrap {
+  display: grid;
+  row-gap: 20px;
+  column-gap: 20px;
+  grid-template-areas: 
+  "img-1 img-3 img-4"
+  "img-2 img-2 img-2";
+}
+.gallery__img {
+  height: 100%;
+  max-width: 100%;
+  border: 2px solid var(--color-white);
+}
+.img-01 {
+  grid-area: img-1;
+}
+.img-02 {
+  grid-area: img-2;
+}
+.img-03 {
+  grid-area: img-3;
+}
+.img-04 {
+  grid-area: img-4;
+}
+
+/* ABOUT */
+
+.about {
+  color: var(--color-white);
+}
+
+.about__title {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  text-align: center;
+}
+
+.about__wrap {
+  display: grid;
+  row-gap: 20px;
+}
+.about__item {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.about__item-title {
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.earth {
+  grid-area: earth;
+} 
+
+.jupiter {
+  grid-area: jupiter;
+}
+
+.mars {
+  grid-area: mars;
+} 
+
+.moon {
+  grid-area: moon;
+}
+
+.saturn {
+  grid-area: saturn;
+}
+
+.sun {
+  grid-area: sun;
+}
+
+.about__img {
+  height: 70%;
+  width: 100%;
+}
+.about__description {
+  padding-top: 20px;
+  text-align: justify;
+}
+
+/* TEAM */
+
+.team {
+  color: var(--color-white);
+  padding-bottom: 50px;
+}
+
+.team__title {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  text-align: center;
+}
+
+.team__wrap {
+  display: grid;
+  gap: 20px;
+}
+
+.mate {
+  border: 2px solid var(--color-white);
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.mate__name {
+  padding-bottom: 20px;
+}
+
+.mate__photo {
+  max-width: 50%;
+}
+.mate__description {
+  padding-top: 20px;
+  text-align: justify;
+}
+
+/* FOOTER */
+
+.footer {
+  background-color: var(--color-black);
+  color: var(--color-white);
+  padding-top: 40px;
+  padding-bottom: 20px;
+}
+
+.footer__rights {
+  text-align: center;
+  padding-bottom: 20px;
+}
+.footer__rights-action:hover {
+  color: var(--hover);
+  transition: .6s;
+}
+
+/* MEDIA-SCREENS */
+
+@media screen and (min-width: 768px) {
+  .menu__hamburger {
+    display: none;
+  }
+  .about__wrap {
+    grid-template-columns: repeat(2, 1fr);
+column-gap: 20px;
+    grid-template-areas: 
+  "earth jupiter"
+  "mars moon"
+  "saturn sun";
+  }
+
+  .team__wrap {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .menu__hamburger {
+    display: block;
+  }
+
+  .menu__actions {
+    display: none;
+  }
+.about__wrap {
+  grid-template-areas: 
+  "earth" 
+  "jupiter"
+  "mars"
+  "moon"
+  "saturn"
+  "sun";
+}
+}
